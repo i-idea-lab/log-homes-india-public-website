@@ -25,6 +25,21 @@ export default function ContactPage() {
             </Reveal>
 
             <Reveal delay={0.1} className="space-y-10">
+              {/* Google Maps Location */}
+              <div className="w-full aspect-[16/10] overflow-hidden border border-gold/30 shadow-md bg-sand/30 rounded-xs">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d863.1438712354759!2d73.0620388706978!3d19.02837152707059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c756501a7be7%3A0xd5765490fb3aca8!2sLog%20Homes%20India%20Private%20Limited!5e1!3m2!1sen!2sin!4v1793875650568!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  title="Log Homes India Headquarters Location"
+                  className="w-full h-full"
+                />
+              </div>
+
               {OFFICES.map((office) => (
                 <div key={office.name}>
                   <Eyebrow>{office.name}</Eyebrow>
