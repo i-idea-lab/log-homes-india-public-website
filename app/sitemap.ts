@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { PROJECTS } from "@/lib/projects";
 
 // Update once the final production domain is confirmed — this is what the
 // generated sitemap.xml uses for every URL.
@@ -15,6 +16,10 @@ const ROUTES: { path: string; priority: number }[] = [
   { path: "/faqs", priority: 0.5 },
   { path: "/contact", priority: 0.9 },
   { path: "/privacy-policy", priority: 0.3 },
+  ...PROJECTS.map((project) => ({
+    path: `/projects/${project.slug}`,
+    priority: 0.6,
+  })),
 ];
 
 // Next.js picks this up automatically and serves it at /sitemap.xml — no
