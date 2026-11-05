@@ -8,6 +8,7 @@ import MobileMenu from "./MobileMenu";
 import { useCursor } from "@/lib/cursor-context";
 
 const NAV_LINKS = [
+  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/projects", label: "Projects" },
@@ -56,7 +57,7 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
