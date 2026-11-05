@@ -1,5 +1,8 @@
-// Real project portfolio for Log Homes India.
-// Single source of truth for the homepage carousel and the /projects listing.
+// Project photos come from the owner's Instagram reels (shared via WhatsApp).
+// DRAFT: titles, categories and locations are inferred from reel captions and
+// still need the owner's confirmation. Single source of truth for the
+// homepage carousel and the /projects listing; keep the shape so ProjectCard
+// doesn't need changes.
 export interface Project {
   title: string;
   category: "Resort" | "Farmhouse" | "Private Residence";
